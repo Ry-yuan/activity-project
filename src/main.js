@@ -9,9 +9,13 @@ import router from './router'
 import ElementUI from 'element-ui'
 // 引入element ui css
 import 'element-ui/lib/theme-chalk/index.css'
+// axios
+import axios from 'axios'
 // vue全局使用element ui
 Vue.use(ElementUI);
+Vue.prototype.$http = axios;
 Vue.config.productionTip = false
+
 
 /* eslint-disable no-new */
 new Vue({
