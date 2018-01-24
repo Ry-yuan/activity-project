@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div> 
     <p class="manage-title">跟进事项</p>
     <el-form :inline="true" :model="formInline" class="demo-form-inline">
       <el-form-item label="姓名">
@@ -31,7 +31,7 @@
       <el-table-column label="计划结束时间" prop="endTime"></el-table-column>
       <el-table-column label="状态" prop="status"></el-table-column>
       <el-table-column label="备注" prop="tips"></el-table-column>
-      <el-table-column label="操作">
+      <el-table-column label="操作" width="150">
         <template slot-scope="scope">
           <el-button type="primary" size="small">编辑</el-button>
           <el-button type="danger" size="small">删除</el-button>
@@ -42,7 +42,7 @@
 
     <!-- 分页 -->
     <div class="paper-pagination">
-      <el-pagination layout="prev,pager,next" :total="100" :page-size="10" current-page.sync="1" @current-change="currentChange"></el-pagination>
+      <el-pagination background  layout="prev,pager,next" :total="100" :page-size="10" current-page.sync="1" @current-change="currentChange"></el-pagination>
     </div>
   </div>
 
@@ -76,7 +76,10 @@
       }
     },
     mounted() {
-
+      let _this = this;
+      this.$http.get('/api/follow',{}).then((res)=>{
+        _this.tableData = res.data.items;
+      })
     }
   }
 
@@ -95,7 +98,7 @@
     text-align: left;
     border-bottom: 2px solid #ccc;
   }
-  
+
  .paper-pagination {
     float: right;
     margin-top: 50px;

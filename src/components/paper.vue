@@ -20,12 +20,12 @@
 
     <!-- 表格 -->
     <el-table :data="tableData" border class="paper-table">
-      <el-table-column label="姓名" prop="report_id"></el-table-column>
+      <el-table-column label="姓名" prop="name"></el-table-column>
       <el-table-column label="上周计划" prop="last_week_plan"></el-table-column>
       <el-table-column label="本周计划" prop="this_week_summary"></el-table-column>
       <el-table-column label="下周计划" prop="next_week_plan"></el-table-column>
       <el-table-column label="重点和问题" prop="importance"></el-table-column>
-      <el-table-column label="操作">
+      <el-table-column label="操作" width="150">
         <template slot-scope="scope">
           <el-button type="primary" size="small">编辑</el-button>
           <el-button type="danger" size="small">删除</el-button>
@@ -60,7 +60,7 @@
 
     <!-- 分页 -->
     <div class="paper-pagination">
-      <el-pagination layout="prev,pager,next" :total="100" :page-size="10" current-page.sync="1" @current-change="currentChange"></el-pagination>
+      <el-pagination background  layout="prev,pager,next" :total="100" :page-size="10" current-page.sync="1" @current-change="currentChange"></el-pagination>
     </div>
   </div>
 </template>
@@ -77,25 +77,7 @@
           region: '',
           date1: ''
         },
-        tableData: [{
-            "report_id": 5,
-            "importance": "xx",
-            "name": "xxx",
-            "time": "2017-01-18",
-            "last_week_plan": "sleep",
-            "this_week_summary": "play",
-            "next_week_plan": "code"
-          },
-          {
-            "report_id": 6,
-            "importance": " 是",
-            "name": "xxxx",
-            "time": "2017-01-18",
-            "last_week_plan": "点",
-            "this_week_summary": " 是",
-            "next_week_plan": " 是"
-          }
-        ],
+        tableData: [],
         dialogData: {
           name: '',
           last_week_plan: '',
@@ -120,9 +102,11 @@
     },
     // 挂载完成后执行的函数
     mounted() {
-      // this.$http.get().then(function(res){
-      //   console.log(res);
-      // });
+      let _this = this;
+      this.$http.get('/api/paper').then(function(res){
+        _this.tableData = res.data.items;
+        // console.log(res.data.items);
+        });
     }
   }
 

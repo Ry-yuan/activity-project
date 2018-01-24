@@ -11,12 +11,14 @@ import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 // axios
 import axios from 'axios'
+// mockjs
+import Mock from './mock/mock'
 // vue全局使用element ui
 Vue.use(ElementUI);
 Vue.prototype.$http = axios;
 Vue.config.productionTip = false
 
-
+Mock.mockData();
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

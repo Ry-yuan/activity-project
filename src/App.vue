@@ -16,7 +16,7 @@
         <!-- nav -->
         <el-menu default-active="1" class="el-menu-vertical-demo">
 
-          <router-link to="/">
+          <router-link to="/paper">
             <el-menu-item index="1">
               <i class="el-icon-location"></i>
               <span>周报管理</span>
@@ -30,7 +30,7 @@
             </el-menu-item>
           </router-link>
 
-          <router-link to="/nav">
+          <router-link to="/manage">
             <el-menu-item index="3">
               <i class="el-icon-setting"></i>
               <span slot="title">报告管理</span>
@@ -114,8 +114,10 @@
   }
 
   .main-right {
+    margin-left:5%;
     float: left;
-    width: 80%;
+    width: 70%;
+    min-width: 1000px;
     /* border:1px solid red; */
   }
 
