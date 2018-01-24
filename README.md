@@ -1,6 +1,6 @@
 # activity-project
 
-> vue 2.0 +  和  element-ui project + mock + axios
+> vue 2.0 +  和  element-ui  + mock + axios
 
 # 安装步骤
 

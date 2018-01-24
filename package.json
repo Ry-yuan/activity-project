@@ -1,7 +1,7 @@
 {
   "name": "activity-project",
   "version": "1.0.0",
-  "description": "vue2+ & element ui project",
+  "description": "vue2+ & element ui + mock + axios 构建的后台项目",
   "author": "ry-yuan",
   "private": true,
   "scripts": {
