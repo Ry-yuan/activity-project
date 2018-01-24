@@ -57,14 +57,7 @@
           date: '',
           status: ''
         },
-        tableData: [{
-          "follower": 5,
-          "content": "打球",
-          "startTime": "2017-10-09",
-          "endTime": '2017-10-10',
-          "status": 1,
-          "tips": '11'
-        }]
+        tableData: []
       }
     },
     methods: {
@@ -73,6 +66,9 @@
       },
       addItem: function () {
         console.log('additem');
+      },
+      currentChange:function(page){
+        console.log('页面：'+page);
       }
     },
     mounted() {

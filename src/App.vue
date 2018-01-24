@@ -82,7 +82,7 @@
     /* margin-top: 60px; */
   }
   .menu{
-    height: 50px;
+    height: 80px;
     background-color: #72777b;
   }
   .menu .title{
@@ -91,9 +91,9 @@
     padding-left:50px;
     color: #fff;
     letter-spacing: 3px;
-    font-size: 18px;
+    font-size: 25px;
     text-align:left;
-    line-height: 50px;
+    line-height: 80px;
   }
   .main {
     display: flex;
@@ -103,7 +103,7 @@
     margin-right:30px;
     float: right;
     height: 100%;
-    line-height:50px;
+    line-height:80px;
   }
 
   .main-left {
