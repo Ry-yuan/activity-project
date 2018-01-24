@@ -4,7 +4,7 @@
     <!-- element-ui的使用，布局row 和 col配合使用，col的span属性可以设置该列的长度 1-24-->
     <el-row>
       <el-col :span="24" class="menu">
-        <span class="title">XXX管理系统</span>
+        <span class="title">XXX后台系统</span>
         <div class="btn-box">
           <el-button type="primary">登陆</el-button>
           <el-button type="info">注册</el-button>
@@ -18,7 +18,7 @@
 
           <router-link to="/paper">
             <el-menu-item index="1">
-              <i class="el-icon-location"></i>
+              <i class="el-icon-view"></i>
               <span>xxx管理</span>
             </el-menu-item>
           </router-link>
@@ -32,10 +32,18 @@
 
           <router-link to="/manage">
             <el-menu-item index="3">
-              <i class="el-icon-setting"></i>
-              <span slot="title">xxx管理</span>
+              <i class="el-icon-tickets"></i>
+              <span slot="title">资料浏览</span>
             </el-menu-item>
           </router-link>
+
+          <router-link to="/upload">
+            <el-menu-item index="4">
+              <i class="el-icon-upload"></i>
+              <span slot="title">上传资料</span>
+            </el-menu-item>
+          </router-link>
+
         </el-menu>
       </div>
 

@@ -75,7 +75,7 @@
       let _this = this;
       this.$http.get('/api/follow',{}).then((res)=>{
         _this.tableData = res.data.items;
-      })
+      });
     }
   }
 
