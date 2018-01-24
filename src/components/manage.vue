@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p class="manage-title">报告管理</p>
+    <p class="manage-title">xxx管理</p>
     <el-form :model="manageData" :inline="true">
       <el-form-item label="时间">
         <el-date-picker v-model="manageData.time" placeholder=""></el-date-picker>

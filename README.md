@@ -1,8 +1,8 @@
 # activity-project
 
-> vue 2.0+ & element-ui project
+> vue 2.0 +  和  element-ui project + mock + axios
 
-## Build Setup
+# 安装步骤
 
 ``` bash
 # install dependencies
@@ -19,7 +19,10 @@ npm run build --report
 ```
 
 
-# vue-cli + element-ui 打造SPA应用过程重点：
+
+---
+# 下面是我搭建整个项目的主要过程(vue-cli + element-ui 打造SPA应用过程描述)：
+
 ## 1.先装好环境vue-cli
 ```bash
 # 安装vue-cli
@@ -103,7 +106,7 @@ exprot default{
 //在main.js中引入：
 improt axios from 'axios'
 Vue.prototype.$http = axios;
-//在组件中使用
+//在组件中使用，get为例
 this.$http.get(url,{parma:xxx}).then((res)=>{
     //success execute
 }).then((res)=>{
@@ -149,3 +152,4 @@ this.$http.get(url,{parma:xxx}).then((res)=>{
 |-- package.json                     // 项目基本信息
 ```
 
+# 这是一个vue2.0+ 和 element-ui的小项目，有助于初学者学习参考。欢迎clone学习，喜欢请点击右上角star!

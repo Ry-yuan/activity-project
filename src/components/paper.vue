@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p class="manage-title">周报管理</p>
+    <p class="manage-title">xxx管理</p>
     <el-form :inline="true" :model="formInline" class="demo-form-inline">
       <el-form-item label="姓名">
         <el-input v-model="formInline.user" placeholder="姓名"></el-input>
